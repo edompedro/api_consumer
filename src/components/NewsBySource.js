@@ -12,14 +12,13 @@ const NewsBySource = () => {
         const url = "https://newsnow.p.rapidapi.com/newsv2"
 
         const payload = {
-            "query": "Economy",
+            "query": "+crypto",
             "time_bounded": true,
             "from_date": dayjs().subtract(7, 'day').format('DD/MM/YYYY'),
             "to_date": dayjs().format('DD/MM/YYYY'),
             "location": "us",
             "language": "en",
             "page": 1,
-            "q": "+crypto",
         }
         let headers = {
             "x-rapidapi-key": "8eb5f381afmsh550a57b1f0b1302p1e7265jsna1decbd764c7",
