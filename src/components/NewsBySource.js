@@ -18,7 +18,8 @@ const NewsBySource = () => {
             "to_date": dayjs().format('DD/MM/YYYY'),
             "location": "us",
             "language": "en",
-            "page": 1
+            "page": 1,
+            "q": "+crypto",
         }
         let headers = {
             "x-rapidapi-key": "8eb5f381afmsh550a57b1f0b1302p1e7265jsna1decbd764c7",

@@ -77,6 +77,11 @@ const CryptoSparkline = () => {
           <Line data={chartData} options={options} />
         </div>
       </div>
+      <div className="text-center mt-4">
+        <button className="btn btn-secondary" onClick={() => window.history.back()}>
+          Back
+        </button>
+      </div>
     </>
   );
 };
