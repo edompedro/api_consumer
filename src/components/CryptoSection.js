@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const CryptoSection = ({ cryptodata }) => {
+  const navigate = useNavigate();
   if (!cryptodata) return <p>Loading Crypto data...</p>;
   console.log(cryptodata);
 
@@ -16,7 +18,12 @@ const CryptoSection = ({ cryptodata }) => {
         <p><strong>24h Low:</strong> ${cryptodata.low_24h}</p>
         <button 
           className="btn btn-primary mt-3" 
-          onClick={() => window.location.href='/CryptoSparkline'}
+          onClick={
+            () =>
+            {
+              navigate(`/CryptoSparkline`, { state: { data: cryptodata.sparkline_in_7d.price } })
+            }
+          }
         >
           View Sparkline
         </button>
