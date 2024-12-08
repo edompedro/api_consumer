@@ -11,6 +11,8 @@
     "@mui/x-data-grid": "^7.23.1",
     "@mui/x-date-pickers": "^7.23.1",
     "@mui/x-tree-view": "^7.23.0",
+    "axios": "^1.7.9",
+    "bootstrap": "^5.3.3",
     "cra-template": "1.2.0",
     "dayjs": "^1.11.13",
     "react": "^19.0.0",

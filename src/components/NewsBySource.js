@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import dayjs from 'dayjs';
 // import requests from 'requests'; // Remove this line
 
 const NewsBySource = () => {
@@ -11,16 +12,16 @@ const NewsBySource = () => {
         const url = "https://newsnow.p.rapidapi.com/newsv2"
 
         const payload = {
-            "query": "AI",
+            "query": "Economy",
             "time_bounded": true,
-            "from_date": "01/02/2021",
-            "to_date": "05/06/2021",
+            "from_date": dayjs().subtract(7, 'day').format('DD/MM/YYYY'),
+            "to_date": dayjs().format('DD/MM/YYYY'),
             "location": "us",
             "language": "en",
             "page": 1
         }
         let headers = {
-            "x-rapidapi-key": "<API_KEY>",
+            "x-rapidapi-key": "8eb5f381afmsh550a57b1f0b1302p1e7265jsna1decbd764c7",
             "x-rapidapi-host": "newsnow.p.rapidapi.com",
             "Content-Type": "application/json"
         }
